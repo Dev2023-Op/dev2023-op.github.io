@@ -8,6 +8,10 @@
 
 pre {
   colour: #fc0303;
+  font-family: monospace;
+  line-height: 1.2;
+  padding: 15px;
+  display: inline-block;
 }
 
 main {
