@@ -58,17 +58,8 @@ nav {
     margin-top: 0;
   }
 }
-
-.post {
-  background-colour: #141414;
-  display: flex;
-  justify-content: center;
-  border: 2px solid black;
-  border-radius: 8px;
-  br {
-    display: block;
-    content: "";
-    margin-top: 0;
-  }
 */
+.post a {
+  color: white;
+  text-decoration: none;
 }
