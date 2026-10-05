@@ -51,6 +51,11 @@ nav {
 .center {
   display: flex;
   justify-content: center;
+  br {
+    display: block;
+    content: "";
+    margin-top: 0;
+  }
 }
 
 .post {
@@ -59,4 +64,9 @@ nav {
   justify-content: center;
   border: 2px solid black;
   border-radius: 8px;
+  br {
+    display: block;
+    content: "";
+    margin-top: 0;
+  }
 }
