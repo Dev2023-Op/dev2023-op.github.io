@@ -52,3 +52,11 @@ nav {
   display: flex;
   justify-content: center;
 }
+
+.post {
+  background-colour: #141414;
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 8px;
+}
