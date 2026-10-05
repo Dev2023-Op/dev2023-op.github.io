@@ -63,3 +63,7 @@ nav {
   color: white;
   text-decoration: none;
 }
+
+li {
+  padding: 30px;
+}
