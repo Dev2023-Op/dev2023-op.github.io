@@ -48,6 +48,7 @@ nav {
   }
 }
 
+/*
 .center {
   display: flex;
   justify-content: center;
@@ -69,4 +70,5 @@ nav {
     content: "";
     margin-top: 0;
   }
+*/
 }
