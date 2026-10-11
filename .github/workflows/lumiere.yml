@@ -1,43 +1,28 @@
 name: Clone Repo on Dispatch
 
 on:
-  workflow_dispatch:
-    inputs:
-      repo_url:
-        description: 'Dev2023-Op/lumiere-timer'
-        required: true
-        type: string
-      target_folder:
-        description: 'lumiere'
-        required: true
-        default: 'lumiere'
-        type: string
+  workflow_dispatch: # Allows manual triggering with a single click
 
 jobs:
   clone-and-push:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout the current repository
+
       - name: Checkout current repo
         uses: actions/checkout@v4
 
-      # 2. Configure Git identity for the commit
       - name: Configure Git user
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.email "github-actions[bot]@://github.com"
 
-      # 3. Clone the external repo into the specified folder
-      # Note: If cloning a private repo, use a personal access token in the URL or via actions/checkout
       - name: Clone target repository
         run: |
-          git clone --depth 1 https://${{ secrets.GH_PAT }}@://github.com{{ inputs.repo_url }}.git ${{ inputs.target_folder }}
-          # Remove the .git folder from the cloned subfolder if you want it treated as plain files rather than a submodule
-          rm -rf ${{ inputs.target_folder }}/.git
+          git clone --depth 1 https://github.com/Dev2023-Op/lumiere-timer lumiere
+          rm -rf lumiere/.git
 
-      # 4. Commit and push the folder back to the current repository
       - name: Commit and push changes
         run: |
-          git add ${{ inputs.target_folder }}
-          git diff --quiet && git diff --staged --quiet || git commit -m "Add cloned content from ${{ inputs.repo_url }} into ${{ inputs.target_folder }}"
+          git add lumiere
+          git diff --quiet && git diff --staged --quiet || git commit -m "Automated sync of cloned content"
           git push origin HEAD
