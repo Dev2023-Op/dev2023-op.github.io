@@ -1,0 +1,20 @@
+name: Clone Repo on Dispatch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  clone:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout target repository into a custom folder
+        uses: actions/checkout@v4
+        with:
+          repository: "Dev2023-Op/lumiere-timer"
+          ref: "main"
+          path: "lumiere"
+          # token: ${{ secrets.MY_PAT }} # Uncomment if cloning a private repo
+          
+      - name: Verify cloned contents
+        run: |
+          ls -la my-cloned-folder
