@@ -23,5 +23,5 @@ function stop(){
     let min = parseInt(document.getElementById("min").innerHTML, 10);
     let sec = parseInt(document.getElementById("sec").innerHTML, 10);
     let total = (min * 60) + sec;
-    document.cookie = "time=" + total + "; max-age=34560000; path=https://dev2023-op.github.io/lumiere/app/;";
+    document.cookie = "time=" + total + "; max-age=34560000; path=/lumiere/app/";
 }
