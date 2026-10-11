@@ -18,11 +18,11 @@ jobs:
 
       - name: Clone target repository
         run: |
-          git clone --depth 1 https://github.com/Dev2023-Op/lumiere-timer lumiere
-          rm -rf lumiere/.git
+          git clone --depth 1 https://github.com/Dev2023-Op/lumiere-timer lumiere/app
+          rm -rf lumiere/app/.git
 
       - name: Commit and push changes
         run: |
-          git add lumiere
+          git add lumiere/app
           git diff --quiet && git diff --staged --quiet || git commit -m "Automated sync of cloned content"
           git push origin HEAD
