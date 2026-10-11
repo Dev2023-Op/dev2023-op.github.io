@@ -18,6 +18,7 @@ jobs:
 
       - name: Clone target repository
         run: |
+          rm -rf lumiere/app
           git clone --depth 1 https://github.com/Dev2023-Op/lumiere-timer lumiere/app
           rm -rf lumiere/app/.git
 
