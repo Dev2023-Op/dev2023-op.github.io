@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="main page">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>What Octopus Server Users Neet To Know About CVE-2026-116870</title>
+</head>
+<body>
+    <nav>
+      <ul>
+        <li><strong>Owen Ross</strong></li>
+        <li><a href="../../index.html" class="active">Home</a></li>
+        <li><a href="../index.html">Blog</a></li>
+        <li><a href="https://github.com/Dev2023-Op">GitHub</a></li>
+      </ul>
+    </nav><br><hr><br>
+    <main>
+<h1>What Octopus Server Users Neet To Know About CVE-2026-116870</h1><br><h2>What is the vulnerability</h2>
+<p>CVE-2026-116870 is a vulnerability on a service called Octopus Server. Octopus Server is a service from Octopus Deploy, the popular CD(continuous deployment) company</p>
+<p>CVE-2026-116870 is a input validation vulnerability where the input will pass the security checks even though the payload is malicious.
+For example a attacker could use "%2e%2e%2f%2e%2e%2fetc%2fpasswd" instead of "../../etc/passwd" if it was a view file input. Keep in mind that this is just a example to give you a idea of obfuscation, the strings used here are unrelated to the vulnerability</p>
+<p>CVE-2026-116870 was found on the 27th of october by security researcher Nathan Willoughby you can view his github <a href="https://github.com/nathjw">here</a></p>
+<h2>Patching your server</h2>
+<p>Octopus has released the patch for this vulnerability. To view affected versions of Octopus Server aswell as more information click <a href="https://advisories.octopus.com/post/2026/sa2026-15/">here</a></p>
+	</main>
+</body>
+</html>
