@@ -6,5 +6,7 @@ https://dev2023-op.github.io/blog/2/index.html
 https://dev2023-op.github.io/blog/3/index.html
 https://dev2023-op.github.io/blog/4/index.html
 https://dev2023-op.github.io/blog/5/index.html
+https://dev2023-op.github.io/blog/6/index.html
+https://dev2023-op.github.io/blog/7/index.html
 https://dev2023-op.github.io/lumiere/app/index.html
 https://dev2023-op.github.io/lumiere/app/stopwatch.html
