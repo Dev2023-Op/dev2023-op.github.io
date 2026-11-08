@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 https://dev2023-op.github.io/
 https://dev2023-op.github.io/pynumerate/
 https://dev2023-op.github.io/blog/
